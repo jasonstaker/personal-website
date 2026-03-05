@@ -7,36 +7,38 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="space-y-3">
-        <h1 className="text-2xl font-semibold">Project not found</h1>
-        <Link className="underline" to="/projects">
-          Back to projects
-        </Link>
+      <div className="page-stack">
+        <section className="page-hero fade-up">
+          <h1 className="panel-title">Project not found</h1>
+          <Link className="section-link mt-3 inline-flex w-fit" to="/projects">
+            Back to projects
+          </Link>
+        </section>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
-      <header className="space-y-2">
-        <h1 className="text-2xl font-semibold">{project.title}</h1>
-        <p className="text-neutral-600">{project.description}</p>
-        <div className="flex gap-3 text-sm">
-          <a className="underline" href={project.repoUrl} target="_blank" rel="noreferrer">
+    <div className="detail-wrap">
+      <header className="detail-header fade-up">
+        <h1 className="detail-title">{project.title}</h1>
+        <p className="lead-copy">{project.description}</p>
+        <div className="link-row mt-3">
+          <a href={project.repoUrl} target="_blank" rel="noreferrer">
             GitHub repo
           </a>
           {project.demoUrl && (
-            <a className="underline" href={project.demoUrl} target="_blank" rel="noreferrer">
+            <a href={project.demoUrl} target="_blank" rel="noreferrer">
               Live demo
             </a>
           )}
         </div>
-        <div className="text-xs text-neutral-500">Last updated {project.lastUpdated}</div>
+        <div className="project-meta mt-3">Last updated {project.lastUpdated}</div>
       </header>
 
       {project.visuals?.[0] && (
         <img
-          className="w-full rounded-lg border"
+          className="detail-image fade-up delay-1"
           src={project.visuals[0].src}
           alt={project.visuals[0].alt}
         />
@@ -47,7 +49,7 @@ export default function ProjectDetail() {
       </Section>
 
       <Section title="Problem / Goal">
-        <ul className="list-disc pl-5 space-y-1">
+        <ul>
           {project.problem.map((x) => (
             <li key={x}>{x}</li>
           ))}
@@ -55,7 +57,7 @@ export default function ProjectDetail() {
       </Section>
 
       <Section title="What was built">
-        <ul className="list-disc pl-5 space-y-1">
+        <ul>
           {project.whatBuilt.map((x) => (
             <li key={x}>{x}</li>
           ))}
@@ -63,7 +65,7 @@ export default function ProjectDetail() {
       </Section>
 
       <Section title="Key engineering highlights">
-        <ul className="list-disc pl-5 space-y-1">
+        <ul>
           {project.highlights.map((x) => (
             <li key={x}>{x}</li>
           ))}
@@ -71,9 +73,9 @@ export default function ProjectDetail() {
       </Section>
 
       <Section title="Tech stack">
-        <div className="flex flex-wrap gap-2">
+        <div className="chip-cloud">
           {project.stack.map((t) => (
-            <span key={t} className="text-xs rounded-md bg-neutral-100 px-2 py-1">
+            <span key={t} className="chip">
               {t}
             </span>
           ))}
@@ -81,15 +83,15 @@ export default function ProjectDetail() {
       </Section>
 
       <Section title="Proof links">
-        <ul className="list-disc pl-5 space-y-1">
+        <ul>
           <li>
-            <a className="underline" href={project.repoUrl} target="_blank" rel="noreferrer">
+            <a href={project.repoUrl} target="_blank" rel="noreferrer">
               Repo
             </a>
           </li>
           {project.demoUrl && (
             <li>
-              <a className="underline" href={project.demoUrl} target="_blank" rel="noreferrer">
+              <a href={project.demoUrl} target="_blank" rel="noreferrer">
                 Demo
               </a>
             </li>
@@ -97,8 +99,8 @@ export default function ProjectDetail() {
         </ul>
       </Section>
 
-      <Link className="underline" to="/projects">
-        ← Back to projects
+      <Link className="section-link inline-flex w-fit" to="/projects">
+        Back to projects
       </Link>
     </div>
   );
@@ -106,9 +108,9 @@ export default function ProjectDetail() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="space-y-2">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <div className="text-neutral-800">{children}</div>
+    <section className="detail-section fade-up delay-2">
+      <h2>{title}</h2>
+      <div>{children}</div>
     </section>
   );
 }

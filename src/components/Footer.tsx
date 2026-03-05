@@ -10,30 +10,28 @@ export default function Footer() {
   const lastUpdated = getLastUpdated();
 
   return (
-    <footer className="border-t">
-      <div className="mx-auto max-w-5xl px-4 py-6 text-sm text-neutral-600">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="footer-shell">
+      <div className="footer-inner">
+        <div className="footer-main">
           <div className="flex flex-col gap-1">
-            <span className="text-neutral-800">
-              © {new Date().getFullYear()} {site.name || "Portfolio"}
+            <span className="footer-brand">
+              &copy; {new Date().getFullYear()} {site.name || "Portfolio"}
             </span>
             {lastUpdated && <span>Last updated {lastUpdated}</span>}
           </div>
 
-          <div className="flex flex-wrap gap-x-4 gap-y-2">
-            <a className="underline" href={site.links.github} target="_blank" rel="noreferrer">
+          <div className="footer-links">
+            <a href={site.links.github} target="_blank" rel="noreferrer">
               GitHub
             </a>
-            <a className="underline" href={site.links.linkedin} target="_blank" rel="noreferrer">
+            <a href={site.links.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <a className="underline" href={mailto}>
-              Email
-            </a>
+            <a href={mailto}>Email</a>
           </div>
         </div>
 
-        <div className="mt-4 text-xs text-neutral-500">Built with React + Vite</div>
+        <div className="footer-note">Built with React + Vite</div>
       </div>
     </footer>
   );

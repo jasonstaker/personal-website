@@ -1,8 +1,10 @@
 export default function Resume() {
   return (
-    <div>
-      <h1 className="text-2xl font-semibold">Resume</h1>
-      <p className="text-neutral-600 mt-2">Embed + download button next.</p>
+    <div className="page-stack">
+      <section className="page-hero fade-up">
+        <h1 className="panel-title">Resume</h1>
+        <p className="lead-copy">Embed + download button next.</p>
+      </section>
     </div>
   );
 }

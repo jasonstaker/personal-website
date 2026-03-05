@@ -4,10 +4,13 @@ import Footer from "../components/Footer";
 
 export default function RootLayout() {
   return (
-    <div className="min-h-dvh flex flex-col">
+    <div className="site-shell">
       <Header />
-      <main className="flex-1">
-        <div className="mx-auto max-w-5xl px-4 py-10">
+      <main className="site-main">
+        <div className="landscape-glow one" />
+        <div className="landscape-glow two" />
+        <div className="landscape-glow three" />
+        <div className="content-wrap">
           <Outlet />
         </div>
       </main>

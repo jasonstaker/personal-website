@@ -2,20 +2,17 @@ import { NavLink } from "react-router-dom";
 import { site } from "../content/site";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  [
-    "text-sm font-medium transition",
-    isActive ? "text-black" : "text-neutral-600 hover:text-black",
-  ].join(" ");
+  ["nav-link", isActive ? "active" : ""].join(" ").trim();
 
 export default function Header() {
   return (
-    <header className="border-b">
-      <div className="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
-        <NavLink to="/" className="font-semibold">
+    <header className="site-header">
+      <div className="header-inner">
+        <NavLink to="/" className="brand-link">
           {site.name || "personal-website"}
         </NavLink>
 
-        <nav className="flex items-center gap-4">
+        <nav className="nav-trail">
           <NavLink to="/projects" className={navLinkClass}>
             Projects
           </NavLink>
@@ -24,7 +21,7 @@ export default function Header() {
           </NavLink>
 
           <a
-            className="text-sm font-medium text-neutral-600 hover:text-black transition"
+            className="social-link"
             href={site.links.github}
             target="_blank"
             rel="noreferrer"
@@ -32,7 +29,7 @@ export default function Header() {
             GitHub
           </a>
           <a
-            className="text-sm font-medium text-neutral-600 hover:text-black transition"
+            className="social-link"
             href={site.links.linkedin}
             target="_blank"
             rel="noreferrer"

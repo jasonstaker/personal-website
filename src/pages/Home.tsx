@@ -5,33 +5,30 @@ export default function Home() {
   const featured = getFeaturedProjects(3);
 
   return (
-    <div className="space-y-10">
-      <section className="space-y-4">
-        <h1 className="text-3xl font-semibold">Software / CS portfolio</h1>
-        <p className="text-neutral-600 max-w-2xl">
+    <div className="page-stack">
+      <section className="page-hero fade-up">
+        <h1 className="panel-title">Software / CS portfolio</h1>
+        <p className="lead-copy">
           High-signal projects with repo links, screenshots, and concise
           engineering highlights.
         </p>
 
-        <div className="flex flex-wrap gap-3">
-          <Link className="px-4 py-2 rounded-md border" to="/projects">
+        <div className="action-row">
+          <Link className="btn-trail" to="/projects">
             View Projects
           </Link>
-          <Link className="px-4 py-2 rounded-md border" to="/resume">
+          <Link className="btn-trail" to="/resume">
             Resume
           </Link>
-          <Link className="px-4 py-2 rounded-md border" to="/contact">
+          <Link className="btn-trail" to="/contact">
             Contact
           </Link>
         </div>
 
-        <div className="flex flex-wrap gap-2 pt-2">
+        <div className="chip-cloud">
           {["TypeScript", "React", "Testing", "APIs", "Performance"].map(
             (k) => (
-              <span
-                key={k}
-                className="text-xs rounded-md bg-neutral-100 px-2 py-1"
-              >
+              <span key={k} className="chip">
                 {k}
               </span>
             )
@@ -39,26 +36,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-4">
-        <div className="flex items-end justify-between">
-          <h2 className="text-xl font-semibold">Featured projects</h2>
-          <Link className="text-sm underline" to="/projects">
+      <section className="panel fade-up delay-1">
+        <div className="section-header">
+          <h2 className="section-title">Featured projects</h2>
+          <Link className="section-link" to="/projects">
             View all
           </Link>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="card-grid">
           {featured.map((p) => (
             <Link
               key={p.slug}
               to={`/projects/${p.slug}`}
-              className="rounded-lg border p-4 hover:bg-neutral-50 transition"
+              className="project-card"
             >
-              <div className="font-semibold">{p.title}</div>
-              <div className="text-sm text-neutral-600 mt-1">
-                {p.description}
-              </div>
-              <div className="text-xs text-neutral-500 mt-3">
+              <h3 className="project-title">{p.title}</h3>
+              <p className="project-desc">{p.description}</p>
+              <div className="project-meta">
                 Updated {p.lastUpdated}
               </div>
             </Link>

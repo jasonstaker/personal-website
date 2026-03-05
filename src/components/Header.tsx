@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { site } from "../content/site";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
@@ -11,7 +12,7 @@ export default function Header() {
     <header className="border-b">
       <div className="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
         <NavLink to="/" className="font-semibold">
-          personal-website
+          {site.name || "personal-website"}
         </NavLink>
 
         <nav className="flex items-center gap-4">
@@ -21,9 +22,10 @@ export default function Header() {
           <NavLink to="/resume" className={navLinkClass}>
             Resume
           </NavLink>
+
           <a
             className="text-sm font-medium text-neutral-600 hover:text-black transition"
-            href="https://github.com/"
+            href={site.links.github}
             target="_blank"
             rel="noreferrer"
           >
@@ -31,12 +33,13 @@ export default function Header() {
           </a>
           <a
             className="text-sm font-medium text-neutral-600 hover:text-black transition"
-            href="https://www.linkedin.com/"
+            href={site.links.linkedin}
             target="_blank"
             rel="noreferrer"
           >
             LinkedIn
           </a>
+
           <NavLink to="/contact" className={navLinkClass}>
             Contact
           </NavLink>

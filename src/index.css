@@ -1,6 +1,4 @@
-/* Minimal baseline */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
+@import "tailwindcss";
+
+/* optional: tiny baseline */
+:root { color-scheme: light; }

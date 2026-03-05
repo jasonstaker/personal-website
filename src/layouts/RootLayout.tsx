@@ -7,9 +7,14 @@ export default function RootLayout() {
     <div className="site-shell">
       <Header />
       <main className="site-main">
-        <div className="landscape-glow one" />
-        <div className="landscape-glow two" />
-        <div className="landscape-glow three" />
+        <div className="ambient-canvas" aria-hidden="true">
+          <div className="landscape-ridge ridge-back" />
+          <div className="landscape-ridge ridge-mid" />
+          <div className="landscape-ridge ridge-front" />
+          <div className="landscape-glow one" />
+          <div className="landscape-glow two" />
+          <div className="landscape-glow three" />
+        </div>
         <div className="content-wrap">
           <Outlet />
         </div>

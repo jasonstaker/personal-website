@@ -12,26 +12,39 @@ export default function Footer() {
   return (
     <footer className="footer-shell">
       <div className="footer-inner">
-        <div className="footer-main">
-          <div className="flex flex-col gap-1">
-            <span className="footer-brand">
-              &copy; {new Date().getFullYear()} {site.name || "Portfolio"}
-            </span>
-            {lastUpdated && <span>Last updated {lastUpdated}</span>}
+        <div className="footer-card">
+          <div className="footer-grid">
+            <div className="footer-block">
+              <span className="footer-kicker">Basecamp</span>
+              <span className="footer-brand">
+                &copy; {new Date().getFullYear()} {site.name || "Portfolio"}
+              </span>
+              {lastUpdated && <span className="footer-updated">Last updated {lastUpdated}</span>}
+            </div>
+
+            <div className="footer-emblem" aria-hidden="true">
+              <span className="footer-emblem-core" />
+            </div>
+
+            <div className="footer-block footer-block-links">
+              <span className="footer-kicker">Trail Links</span>
+              <div className="footer-links">
+                <a href={site.links.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+                <a href={site.links.linkedin} target="_blank" rel="noreferrer">
+                  LinkedIn
+                </a>
+                <a href={mailto}>Email</a>
+              </div>
+            </div>
           </div>
 
-          <div className="footer-links">
-            <a href={site.links.github} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-            <a href={site.links.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a href={mailto}>Email</a>
+          <div className="footer-base">
+            <span className="footer-note">Built with React + Vite</span>
+            {site.location && <span className="footer-location">{site.location}</span>}
           </div>
         </div>
-
-        <div className="footer-note">Built with React + Vite</div>
       </div>
     </footer>
   );

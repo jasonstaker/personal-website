@@ -1,10 +1,10 @@
 export const site = {
-  name: "Jason Staker", // or keep generic for now
-  location: "Vancouver, BC",
-  email: "you@example.com",
+  name: "Jason Staker",
+  location: "Vancouver, BC, Canada / Trabuco Canyon, CA, USA",
+  email: "jason.staker@yahoo.com",
   links: {
-    github: "https://github.com/yourname",
-    linkedin: "https://www.linkedin.com/in/yourname/",
+    github: "https://github.com/jasonstaker/",
+    linkedin: "https://www.linkedin.com/in/jason-staker-53b8a9280/",
   },
 } as const;
 

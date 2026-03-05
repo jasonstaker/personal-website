@@ -6,37 +6,50 @@ export default function Home() {
 
   return (
     <div className="page-stack">
-      <section className="page-hero fade-up">
-        <h1 className="panel-title">Software / CS portfolio</h1>
-        <p className="lead-copy">
-          High-signal projects with repo links, screenshots, and concise
-          engineering highlights.
-        </p>
+      <section className="page-hero hero-camp fade-up">
+        <div className="hero-shell">
+          <div>
+            <h1 className="panel-title">Jason Staker's Portfolio</h1>
+            <p className="lead-copy">
+              High-signal projects with repo links, screenshots, and concise
+              engineering highlights.
+            </p>
 
-        <div className="action-row">
-          <Link className="btn-trail" to="/projects">
-            View Projects
-          </Link>
-          <Link className="btn-trail" to="/resume">
-            Resume
-          </Link>
-          <Link className="btn-trail" to="/contact">
-            Contact
-          </Link>
-        </div>
+            <div className="action-row">
+              <Link className="btn-trail" to="/projects">
+                View Projects
+              </Link>
+              <Link className="btn-trail" to="/resume">
+                Resume
+              </Link>
+              <Link className="btn-trail" to="/contact">
+                Contact
+              </Link>
+            </div>
 
-        <div className="chip-cloud">
-          {["TypeScript", "React", "Testing", "APIs", "Performance"].map(
-            (k) => (
-              <span key={k} className="chip">
-                {k}
-              </span>
-            )
-          )}
+            <div className="chip-cloud">
+              {["TypeScript", "React", "Testing", "APIs", "Performance"].map(
+                (k) => (
+                  <span key={k} className="chip">
+                    {k}
+                  </span>
+                )
+              )}
+            </div>
+          </div>
+
+          <figure className="hero-photo-frame" aria-label="Portrait photo">
+            <img
+              className="hero-photo"
+              src="/about/face-with-background.jpg"
+              alt="Portrait of Jason Staker"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </section>
 
-      <section className="panel fade-up delay-1">
+      <section className="panel terrain-panel fade-up delay-1">
         <div className="section-header">
           <h2 className="section-title">Featured projects</h2>
           <Link className="section-link" to="/projects">

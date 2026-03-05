@@ -6,7 +6,7 @@ export default function Projects() {
     <div className="page-stack">
       <section className="page-hero fade-up">
         <h1 className="panel-title">Projects</h1>
-        <p className="lead-copy">3-6 projects. Skimmable. Proof-first.</p>
+        <p className="lead-copy">Projects I've completed out of passion, from academics, and professionally.</p>
       </section>
 
       <section className="projects-grid fade-up delay-1">

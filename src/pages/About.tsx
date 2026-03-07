@@ -1,6 +1,14 @@
+import Seo from "../components/Seo";
+
 export default function About() {
   return (
     <div className="page-stack">
+      <Seo
+        title="About | Jason Staker"
+        description="About Jason Staker, a Computer Science student focused on systems, robotics, and practical software engineering."
+        canonicalPath="/about"
+      />
+
       <section className="page-hero fade-up">
         <h1 className="panel-title">About</h1>
         <p className="lead-copy">

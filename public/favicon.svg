@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JS logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#456853" />
+      <stop offset="100%" stop-color="#22362b" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3dcae" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#e5b975" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg)" />
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="#f8f3e6" stroke-opacity="0.3" />
+  <path d="M8 44L18 35L26 41L35 31L45 42L56 33V62H8Z" fill="url(#glow)" />
+
+  <text
+    x="32"
+    y="35"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Avenir Next, Segoe UI, Arial, sans-serif"
+    font-size="28"
+    font-weight="800"
+    letter-spacing="0.5"
+    fill="#f8f3e6"
+  >
+    JS
+  </text>
+</svg>

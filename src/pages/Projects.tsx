@@ -1,17 +1,32 @@
 import { Link } from "react-router-dom";
 import { projects } from "../content/projects";
+import Seo from "../components/Seo";
 
 export default function Projects() {
   return (
-    <div className="page-stack">
-      <section className="page-hero fade-up">
-        <h1 className="panel-title">Projects</h1>
-        <p className="lead-copy">Projects I've completed out of passion, from academics, and professionally.</p>
-      </section>
+    <div className="page-stack projects-page">
+      <Seo
+        title="Projects | Jason Staker"
+        description="Project portfolio of Jason Staker with C++, Python, systems, and data-focused software builds."
+        canonicalPath="/projects"
+      />
+
+      <header className="page-title-wrap fade-up">
+        <span className="page-kicker">Selected Work</span>
+        <h1 className="page-display-title">Projects</h1>
+      </header>
 
       <section className="projects-grid fade-up delay-1">
         {projects.map((p) => (
-          <article key={p.slug} className="projects-item">
+          <article key={p.slug} className="projects-item projects-showcase">
+            <Link className="project-media-link" to={`/projects/${p.slug}`} aria-label={`${p.title} preview`}>
+              {p.visuals?.[0] ? (
+                <img className="project-media" src={p.visuals[0].src} alt={p.visuals[0].alt} loading="lazy" />
+              ) : (
+                <div className="project-media project-media-placeholder">Project Preview</div>
+              )}
+            </Link>
+
             <div className="item-head">
               <div>
                 <h2 className="item-heading">

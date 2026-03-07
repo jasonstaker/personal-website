@@ -16,44 +16,54 @@ export default function Experience() {
       </header>
 
       <section className="experience-list fade-up delay-1" aria-label="Professional experience timeline">
-        {experiences.map((entry) => (
-          <article key={entry.slug} className="experience-card">
-            <span className="experience-marker" aria-hidden="true" />
+        {experiences.map((entry) => {
+          const isHotb = entry.slug.startsWith("hotb");
 
-            <header className="experience-card-head">
-              <div className="experience-company">
-                <div className="experience-logo-shell">
-                  <img className="experience-logo" src={entry.logoSrc} alt={entry.logoAlt} loading="lazy" />
+          return (
+            <article key={entry.slug} className="experience-card">
+              <span className="experience-marker" aria-hidden="true" />
+
+              <header className="experience-card-head">
+                <div className="experience-company">
+                  <a
+                    className={`experience-logo-shell${isHotb ? " experience-logo-shell--inset" : ""}`}
+                    href={entry.companyUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Visit ${entry.organization} website`}
+                  >
+                    <img className="experience-logo" src={entry.logoSrc} alt={entry.logoAlt} loading="lazy" />
+                  </a>
+                  <div>
+                    <h2 className="experience-role">{entry.role}</h2>
+                    <p className="experience-org">{entry.organization}</p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="experience-role">{entry.role}</h2>
-                  <p className="experience-org">{entry.organization}</p>
+
+                <div className="experience-meta">
+                  <p className="experience-period">{entry.period}</p>
+                  <p className="experience-location">{entry.location}</p>
                 </div>
+              </header>
+
+              <p className="experience-summary">{entry.summary}</p>
+
+              <ul className="experience-points">
+                {entry.highlights.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+
+              <div className="chip-cloud experience-tech">
+                {entry.tech.map((tool) => (
+                  <span key={tool} className="chip">
+                    {tool}
+                  </span>
+                ))}
               </div>
-
-              <div className="experience-meta">
-                <p className="experience-period">{entry.period}</p>
-                <p className="experience-location">{entry.location}</p>
-              </div>
-            </header>
-
-            <p className="experience-summary">{entry.summary}</p>
-
-            <ul className="experience-points">
-              {entry.highlights.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-
-            <div className="chip-cloud experience-tech">
-              {entry.tech.map((tool) => (
-                <span key={tool} className="chip">
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </section>
     </div>
   );

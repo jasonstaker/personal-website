@@ -2,6 +2,7 @@ export type ExperienceRole = {
   slug: string;
   role: string;
   organization: string;
+  companyUrl: string;
   logoSrc: string;
   logoAlt: string;
   location: string;
@@ -16,6 +17,7 @@ export const experiences: ExperienceRole[] = [
     slug: "ubc-uas",
     role: "Developer, Software Team",
     organization: "UBC Uncrewed Aircraft Systems (UAS)",
+    companyUrl: "https://ubcuas.com/",
     logoSrc: "/experience/ubc-uas-logo.png",
     logoAlt: "UBC UAS logo",
     location: "Vancouver, BC, Canada",
@@ -33,6 +35,7 @@ export const experiences: ExperienceRole[] = [
     slug: "hotb-rfp",
     role: "Software / Business Development Intern",
     organization: "HOTB Software Solutions",
+    companyUrl: "https://hotbsoftware.com/",
     logoSrc: "/experience/hotb-logo.png",
     logoAlt: "HOTB Software Solutions logo",
     location: "Irvine, CA, USA",
@@ -50,6 +53,7 @@ export const experiences: ExperienceRole[] = [
     slug: "hotb-qa",
     role: "Quality Assurance Intern",
     organization: "HOTB Software Solutions",
+    companyUrl: "https://hotbsoftware.com/",
     logoSrc: "/experience/hotb-logo.png",
     logoAlt: "HOTB Software Solutions logo",
     location: "Irvine, CA, USA",

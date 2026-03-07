@@ -13,7 +13,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="detail-wrap">
+    <div className="detail-wrap cohesive-stack">
       <Seo
         title={`${project.title} | Jason Staker`}
         description={`${project.title} project details, engineering highlights, and tech stack by Jason Staker.`}

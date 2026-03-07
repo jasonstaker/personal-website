@@ -31,7 +31,7 @@ export default function Home() {
   } as const;
 
   return (
-    <div className="page-stack">
+    <div className="page-stack cohesive-stack">
       <Seo
         title="Jason Staker | Software Portfolio"
         description="Computer Science portfolio of Jason Staker featuring systems, robotics, and software engineering projects."

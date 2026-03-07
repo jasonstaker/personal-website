@@ -22,10 +22,6 @@ export default function Footer() {
               {lastUpdated && <span className="footer-updated">Last updated {lastUpdated}</span>}
             </div>
 
-            <div className="footer-emblem" aria-hidden="true">
-              <span className="footer-emblem-core" />
-            </div>
-
             <div className="footer-block footer-block-links">
               <span className="footer-kicker">Trail Links</span>
               <div className="footer-links">

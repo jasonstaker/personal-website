@@ -119,119 +119,6 @@ h4 {
   z-index: 5;
 }
 
-.landscape-ridge {
-  position: fixed;
-  left: -28vw;
-  width: 156vw;
-  pointer-events: none;
-  z-index: 1;
-  filter: blur(0.2px);
-}
-
-.landscape-ridge.ridge-back {
-  height: clamp(30rem, 56vh, 46rem);
-  bottom: 24vh;
-  opacity: 0.44;
-  background: linear-gradient(180deg, #7b8f8b 0%, #5e7073 100%);
-  clip-path: polygon(
-    0% 100%,
-    0% 74%,
-    7% 60%,
-    14% 66%,
-    22% 49%,
-    30% 64%,
-    38% 47%,
-    47% 67%,
-    56% 50%,
-    64% 68%,
-    73% 53%,
-    82% 67%,
-    90% 52%,
-    100% 66%,
-    100% 100%
-  );
-}
-
-.landscape-ridge.ridge-mid {
-  height: clamp(34rem, 64vh, 52rem);
-  bottom: 8vh;
-  opacity: 0.6;
-  background: linear-gradient(180deg, #4f6f62 0%, #37544b 100%);
-  clip-path: polygon(
-    0% 100%,
-    0% 77%,
-    8% 64%,
-    16% 72%,
-    24% 57%,
-    33% 73%,
-    41% 55%,
-    50% 75%,
-    59% 59%,
-    69% 77%,
-    77% 60%,
-    87% 74%,
-    94% 61%,
-    100% 69%,
-    100% 100%
-  );
-}
-
-.landscape-ridge.ridge-front {
-  height: clamp(38rem, 72vh, 58rem);
-  bottom: -10vh;
-  opacity: 0.79;
-  background: linear-gradient(180deg, #355246 0%, #243a31 100%);
-  clip-path: polygon(
-    0% 100%,
-    0% 81%,
-    10% 72%,
-    18% 84%,
-    28% 67%,
-    36% 82%,
-    45% 64%,
-    55% 84%,
-    64% 67%,
-    73% 82%,
-    83% 69%,
-    92% 82%,
-    100% 74%,
-    100% 100%
-  );
-}
-
-.landscape-glow {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(4px);
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0.65;
-}
-
-.landscape-glow.one {
-  width: 22rem;
-  height: 22rem;
-  left: -7rem;
-  top: 2rem;
-  background: radial-gradient(circle, rgba(246, 249, 248, 0.72) 0%, rgba(246, 249, 248, 0) 70%);
-}
-
-.landscape-glow.two {
-  width: 20rem;
-  height: 20rem;
-  right: -6rem;
-  top: 16%;
-  background: radial-gradient(circle, rgba(126, 140, 145, 0.48) 0%, rgba(126, 140, 145, 0) 73%);
-}
-
-.landscape-glow.three {
-  width: 27rem;
-  height: 27rem;
-  right: 10%;
-  bottom: -10rem;
-  background: radial-gradient(circle, rgba(126, 99, 70, 0.24) 0%, rgba(126, 99, 70, 0) 74%);
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -1996,11 +1883,6 @@ h4 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .landscape-ridge,
-  .landscape-glow {
-    transform: none !important;
-  }
-
   .ambient-canvas::before {
     background: linear-gradient(180deg, rgba(244, 248, 247, 0.26) 0%, rgba(20, 31, 28, 0.28) 100%);
     opacity: 1;
@@ -2054,29 +1936,6 @@ h4 {
   .hero-shell {
     grid-template-columns: max-content clamp(10rem, 32vw, 13.5rem);
     justify-content: center;
-  }
-
-  .landscape-ridge {
-    left: -40vw;
-    width: 184vw;
-  }
-
-  .landscape-ridge.ridge-back {
-    bottom: 24vh;
-    height: clamp(28rem, 56vh, 44rem);
-    opacity: 0.46;
-  }
-
-  .landscape-ridge.ridge-mid {
-    bottom: 10vh;
-    height: clamp(31rem, 63vh, 50rem);
-    opacity: 0.56;
-  }
-
-  .landscape-ridge.ridge-front {
-    bottom: -8vh;
-    height: clamp(35rem, 72vh, 56rem);
-    opacity: 0.74;
   }
 
   .contact-layout {
@@ -2163,26 +2022,6 @@ h4 {
   .footer-base {
     justify-content: center;
     text-align: center;
-  }
-
-  .landscape-ridge {
-    left: -52vw;
-    width: 206vw;
-  }
-
-  .landscape-ridge.ridge-back {
-    bottom: 23vh;
-    height: clamp(26rem, 54vh, 40rem);
-  }
-
-  .landscape-ridge.ridge-mid {
-    bottom: 9vh;
-    height: clamp(29rem, 62vh, 46rem);
-  }
-
-  .landscape-ridge.ridge-front {
-    bottom: -9vh;
-    height: clamp(33rem, 72vh, 52rem);
   }
 
   .resume-frame {

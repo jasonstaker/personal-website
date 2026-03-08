@@ -6,7 +6,7 @@ const rootDir = process.cwd();
 const projectsFile = path.join(rootDir, "src", "content", "projects.ts");
 const sitemapFile = path.join(rootDir, "public", "sitemap.xml");
 
-const baseUrlRaw = process.env.SITE_URL || process.env.VITE_SITE_URL || "https://jasonstaker.vercel.app";
+const baseUrlRaw = process.env.SITE_URL || process.env.VITE_SITE_URL || "https://jasonstaker.dev";
 const baseUrl = baseUrlRaw.replace(/\/+$/, "");
 const today = new Date().toISOString().slice(0, 10);
 

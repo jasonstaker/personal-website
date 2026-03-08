@@ -2,7 +2,7 @@
 
 Personal portfolio website for projects, experience, resume, and contact information.
 
-Live domain: `https://jasonstaker.vercel.app`
+Live domain: `https://jasonstaker.dev`
 
 ## Stack
 
@@ -124,7 +124,7 @@ npm run lint
 - Sitemap base URL comes from:
   - `SITE_URL`, or
   - `VITE_SITE_URL`, or
-  - fallback: `https://jasonstaker.vercel.app`
+  - fallback: `https://jasonstaker.dev`
 
 ## Deployment
 

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jasonstaker.vercel.app</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://jasonstaker.dev</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/projects</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://jasonstaker.dev/projects</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/experience</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://jasonstaker.dev/experience</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/resume</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://jasonstaker.dev/resume</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/contact</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://jasonstaker.dev/contact</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/about</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://jasonstaker.dev/about</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/projects/schwarzschild-blackhole-renderer</loc>
+    <loc>https://jasonstaker.dev/projects/schwarzschild-blackhole-renderer</loc>
     <lastmod>2025-07-21</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/projects/2d-physics-demo</loc>
+    <loc>https://jasonstaker.dev/projects/2d-physics-demo</loc>
     <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/projects/rfp-scraper</loc>
+    <loc>https://jasonstaker.dev/projects/rfp-scraper</loc>
     <lastmod>2026-01-13</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/projects/student-calendar</loc>
+    <loc>https://jasonstaker.dev/projects/student-calendar</loc>
     <lastmod>2025-05-09</lastmod>
   </url>
   <url>
-    <loc>https://jasonstaker.vercel.app/projects/personal-website</loc>
+    <loc>https://jasonstaker.dev/projects/personal-website</loc>
     <lastmod>2026-03-05</lastmod>
   </url>
 </urlset>

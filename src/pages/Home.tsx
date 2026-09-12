@@ -5,28 +5,29 @@ import Seo from "../components/Seo";
 export default function Home() {
   const featured = getFeaturedProjects(3);
   const skills = {
-    Languages: ["C++", "Python", "Java"],
-    "Frameworks & Tools": [
+    Languages: ["C++17", "Python", "Java", "TypeScript", "Bash"],
+    "Flight Software & Robotics": [
       "ROS2",
+      "MAVROS",
+      "MAVLink",
       "Docker",
-      "Git",
       "CMake",
+      "Eigen",
       "OpenCV",
-      "OpenMP",
-      "GoogleTest",
-      "SFML",
-      "PyQt5",
-      "Selenium",
-      "Pandas",
-      "Postman",
+      "Jetson Nano",
+      "Raspberry Pi",
+      "Linux",
+      "Git",
     ],
-    "Core Knowledge": [
-      "Data Structures & Algorithms",
-      "Object-Oriented Design",
-      "API Testing",
-      "Test Automation",
-      "Bash",
-      "Linux CLI",
+    "Simulation & Verification": [
+      "Runge-Kutta Integration",
+      "Flight Dynamics",
+      "US Standard Atmosphere 1976",
+      "Order-of-Accuracy Testing",
+      "GoogleTest",
+      "pytest",
+      "Invariant & Property Testing",
+      "Hardware-Independent Test Design",
     ],
   } as const;
 
@@ -34,7 +35,7 @@ export default function Home() {
     <div className="page-stack cohesive-stack">
       <Seo
         title="Jason Staker | Software Portfolio"
-        description="Computer Science portfolio of Jason Staker featuring systems, robotics, and software engineering projects."
+        description="Computer Science portfolio of Jason Staker featuring flight software, simulation, robotics, and autonomous systems projects."
         canonicalPath="/"
       />
 
@@ -59,7 +60,7 @@ export default function Home() {
           <figure className="hero-photo-frame" aria-label="Portrait photo">
             <img
               className="hero-photo"
-              src="/about/face-with-background.jpg"
+              src="/about/jason-staker-headshot.jpg"
               alt="Portrait of Jason Staker"
               loading="lazy"
             />
@@ -71,11 +72,12 @@ export default function Home() {
         <h2 className="section-title">About</h2>
         <p className="lead-copy">
           I&apos;m a Computer Science student at the University of British Columbia (B.Sc., expected 2028, GPA 4.0)
-          focused on systems and practical software engineering. I currently contribute to the UBC UAS software team,
-          where I work on Dockerized camera and ROS2 telemetry workflows for reliable offline development and testing.
-          At HOTB Software Solutions, I worked across software development and QA, building automation that
-          significantly reduced manual work and improved release confidence. Outside of code, I&apos;ve been mountain
-          biking for six years, which is the inspiration for this site&apos;s outdoor visual direction.
+          focused on flight software and autonomous systems. I&apos;m currently on an eight-month backend co-op at
+          Visier while continuing with the UBC UAS software team, where I build ROS2 navigation and imaging nodes that
+          run onboard a Jetson Nano during competition flights. On my own time I&apos;m writing rocket-sim, a C++17
+          flight simulator whose numerical core is verified layer by layer before anything is built on top of it. I
+          also hold a Transport Canada Advanced RPAS license. Outside of code, I&apos;ve been mountain biking for six
+          years, which is the inspiration for this site&apos;s outdoor visual direction.
         </p>
       </section>
 

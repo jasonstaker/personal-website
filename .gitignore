@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Personal source material (not for publication)
+Info_Doc.md
+jason_staker.jpg

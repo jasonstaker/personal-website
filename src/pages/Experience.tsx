@@ -6,7 +6,7 @@ export default function Experience() {
     <div className="page-stack experience-page">
       <Seo
         title="Experience | Jason Staker"
-        description="Experience timeline for Jason Staker across UBC UAS and HOTB Software Solutions."
+        description="Experience timeline for Jason Staker across Visier, UBC UAS, Staker Legal Tech, and HOTB Software Solutions."
         canonicalPath="/experience"
       />
 
@@ -32,7 +32,13 @@ export default function Experience() {
                     rel="noreferrer"
                     aria-label={`Visit ${entry.organization} website`}
                   >
-                    <img className="experience-logo" src={entry.logoSrc} alt={entry.logoAlt} loading="lazy" />
+                    {entry.logoSrc ? (
+                      <img className="experience-logo" src={entry.logoSrc} alt={entry.logoAlt} loading="lazy" />
+                    ) : (
+                      <span className="experience-logo-placeholder" aria-hidden="true">
+                        {initialsFor(entry.organization)}
+                      </span>
+                    )}
                   </a>
                   <div>
                     <h2 className="experience-role">{entry.role}</h2>
@@ -67,4 +73,13 @@ export default function Experience() {
       </section>
     </div>
   );
+}
+
+function initialsFor(organization: string) {
+  return organization
+    .split(" ")
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
 }

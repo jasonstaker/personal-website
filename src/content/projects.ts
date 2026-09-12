@@ -3,7 +3,7 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  category?: "Web" | "Systems" | "AI" | "Data" | "Robotics";
+  category?: "Web" | "Systems" | "AI" | "Data" | "Robotics" | "Aerospace";
   repoUrl: string;
   demoUrl?: string;
   lastUpdated: string; // YYYY-MM-DD
@@ -15,6 +15,25 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "rocket-sim",
+    title: "Rocket Flight Simulator",
+    description:
+      "C++17 flight simulator for high-power rockets, built as a verified numerical core with each layer tested before the next is added. Validated 3-DOF vertical flight today, architected toward 6-DOF attitude dynamics and dispersion analysis.",
+    tags: ["C++", "Eigen", "Flight Dynamics", "Numerical Methods", "GoogleTest", "CMake"],
+    category: "Aerospace",
+    repoUrl: "https://github.com/jasonstaker/rocket-sim",
+    lastUpdated: "2026-08-22",
+    problem: ["Simulator defects fail silently rather than loudly, so correctness has to be proven layer by layer instead of inferred from a plausible-looking trajectory", "Wanted a flight dynamics codebase that could grow toward attitude dynamics and guidance work without rewriting the numerical core"],
+    whatBuilt: [
+      "Header-only fourth-order Runge-Kutta integrator templated over both state type and derivative callable, with no coupling to the flight domain",
+      "Propulsion model that parses industry-standard RASP thrust-curve files and derives mass depletion from delivered impulse rather than elapsed time",
+      "Environment model pairing inverse-square gravity with a full seven-layer US Standard Atmosphere 1976 implementation",
+      "3-DOF vertical launch driver integrating a six-element state vector to apogee detection",
+    ],
+    highlights: ["Verified integrator order of accuracy by step halving, asserting the error ratio brackets the theoretical sixteen times reduction so an accidental lower-order scheme fails the suite", "Matched published atmospheric densities within 1e-3 kg per cubic meter at six altitudes across the full layered model", "Integrated a 26-point real test-stand motor curve to 1290.54 newton-seconds of total impulse, matching the rated motor class", "Held 11 GoogleTest cases green across 3 suites, pairing every feature commit to a test commit"],
+    stack: ["C++17", "Eigen", "CMake", "FetchContent", "GoogleTest", "clang-format"],
+  },
   {
     slug: "schwarzschild-blackhole-renderer",
     title: "Schwarzschild Ray Tracer",
@@ -84,7 +103,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Vite", "Tailwind", "React Router"],
     category: "Web",
     repoUrl: "https://github.com/jasonstaker/personal-website",
-    lastUpdated: "2026-03-05",
+    lastUpdated: "2026-09-12",
     problem: ["Needed one clear hub for projects, resume, and professional links", "Wanted recruiter-friendly navigation with low click friction"],
     whatBuilt: ["Route-based portfolio with shared design system", "Data-driven project pages so content updates are easy and consistent"],
     highlights: ["Deployed as a production-ready personal site", "Theme-forward UI with responsive layouts across desktop/mobile", "Project detail pages structured for technical skimming"],

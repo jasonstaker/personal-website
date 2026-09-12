@@ -1255,6 +1255,19 @@ h4 {
   transform: scale(1);
 }
 
+.experience-logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.28rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pine-800);
+}
+
 .experience-role {
   margin: 0;
   font-size: clamp(1.06rem, 2.8vw, 1.22rem);

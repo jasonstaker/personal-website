@@ -3,7 +3,7 @@ export type ExperienceRole = {
   role: string;
   organization: string;
   companyUrl: string;
-  logoSrc: string;
+  logoSrc?: string;
   logoAlt: string;
   location: string;
   period: string;
@@ -13,6 +13,42 @@ export type ExperienceRole = {
 };
 
 export const experiences: ExperienceRole[] = [
+  {
+    slug: "visier",
+    role: "Software Developer, Co-op",
+    organization: "Visier",
+    companyUrl: "https://www.visier.com/",
+    logoAlt: "Visier logo",
+    location: "Vancouver, BC, Canada",
+    period: "September 2026 - April 2027",
+    summary:
+      "Eight-month backend co-op on the Platform Framework team, the group that owns the cross-cutting services the rest of the product is built on.",
+    highlights: [
+      "Onboarding into a production JVM backend and the team's build, review, and release workflows.",
+      "Team scope covers authentication and authorization pipelines, including public API authentication, OAuth, and single sign-on through OIDC.",
+      "Team scope also covers framework and dependency upgrades across services, internal infrastructure automation, and platform-wide governance such as quotas and SCIM compliance.",
+    ],
+    tech: ["Java", "sbt", "OAuth", "SSO / OIDC", "SCIM", "REST APIs", "Git"],
+  },
+  {
+    slug: "staker-legal-tech",
+    role: "Founding Software Developer",
+    organization: "Staker Legal Tech",
+    companyUrl: "https://github.com/StakerLegalTech",
+    logoAlt: "Staker Legal Tech logo",
+    location: "Ventura, CA, USA (Remote)",
+    period: "June 2026 - August 2026",
+    summary:
+      "Sole developer of a document automation engine for a California trust administration practice, built to replace a legacy 52-form merge macro whose conditional logic had silently gone dead.",
+    highlights: [
+      "Designed a hexagonal Python application whose pure domain core derives the legal consequences of a matter, which statutory notices are owed, to whom, and by when, then renders the documents those conclusions call for.",
+      "Shipped 12,487 lines of production Python across 44 modules behind 527 passing tests, with mypy in strict mode and ruff clean.",
+      "Enforced the architecture instead of documenting it, using a test that parses the syntax tree of every core module and fails the build if one imports an adapter or service.",
+      "Built a routing spine over a 40-entry document catalog with per-document predicates and one-to-many fan-out across 9 axes, then fuzzed it to 0 exceptions over 7,389 randomly varied matters.",
+      "Gathered requirements directly from the supervising attorney and kept every firm-specific value in configuration, so the same build can serve another practice.",
+    ],
+    tech: ["Python", "Pydantic v2", "docxtpl", "Jinja2", "pytest", "mypy", "ruff", "uv"],
+  },
   {
     slug: "ubc-uas",
     role: "Developer, Software Team",

@@ -18,6 +18,7 @@ export const experiences: ExperienceRole[] = [
     role: "Software Developer, Co-op",
     organization: "Visier",
     companyUrl: "https://www.visier.com/",
+    logoSrc: "/experience/visier-logo.png",
     logoAlt: "Visier logo",
     location: "Vancouver, BC, Canada",
     period: "September 2026 - April 2027",

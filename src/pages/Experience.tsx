@@ -78,7 +78,7 @@ export default function Experience() {
 function initialsFor(organization: string) {
   return organization
     .split(" ")
-    .slice(0, 2)
+    .slice(0, 3)
     .map((word) => word[0])
     .join("")
     .toUpperCase();

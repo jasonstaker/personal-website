@@ -2,7 +2,7 @@ export type ExperienceRole = {
   slug: string;
   role: string;
   organization: string;
-  companyUrl: string;
+  companyUrl?: string;
   logoSrc?: string;
   logoAlt: string;
   location: string;
@@ -35,7 +35,6 @@ export const experiences: ExperienceRole[] = [
     slug: "staker-legal-tech",
     role: "Founding Software Developer",
     organization: "Staker Legal Tech",
-    companyUrl: "https://github.com/StakerLegalTech",
     logoAlt: "Staker Legal Tech logo",
     location: "Ventura, CA, USA (Remote)",
     period: "June 2026 - August 2026",

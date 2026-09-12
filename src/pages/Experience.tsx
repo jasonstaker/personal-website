@@ -18,6 +18,14 @@ export default function Experience() {
       <section className="experience-list fade-up delay-1" aria-label="Professional experience timeline">
         {experiences.map((entry) => {
           const isHotb = entry.slug.startsWith("hotb");
+          const shellClass = `experience-logo-shell${isHotb ? " experience-logo-shell--inset" : ""}`;
+          const logo = entry.logoSrc ? (
+            <img className="experience-logo" src={entry.logoSrc} alt={entry.logoAlt} loading="lazy" />
+          ) : (
+            <span className="experience-logo-placeholder" aria-hidden="true">
+              {initialsFor(entry.organization)}
+            </span>
+          );
 
           return (
             <article key={entry.slug} className="experience-card">
@@ -25,21 +33,19 @@ export default function Experience() {
 
               <header className="experience-card-head">
                 <div className="experience-company">
-                  <a
-                    className={`experience-logo-shell${isHotb ? " experience-logo-shell--inset" : ""}`}
-                    href={entry.companyUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Visit ${entry.organization} website`}
-                  >
-                    {entry.logoSrc ? (
-                      <img className="experience-logo" src={entry.logoSrc} alt={entry.logoAlt} loading="lazy" />
-                    ) : (
-                      <span className="experience-logo-placeholder" aria-hidden="true">
-                        {initialsFor(entry.organization)}
-                      </span>
-                    )}
-                  </a>
+                  {entry.companyUrl ? (
+                    <a
+                      className={shellClass}
+                      href={entry.companyUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Visit ${entry.organization} website`}
+                    >
+                      {logo}
+                    </a>
+                  ) : (
+                    <div className={shellClass}>{logo}</div>
+                  )}
                   <div>
                     <h2 className="experience-role">{entry.role}</h2>
                     <p className="experience-org">{entry.organization}</p>
